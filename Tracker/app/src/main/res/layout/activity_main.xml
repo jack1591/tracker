@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:id="@+id/host_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <Button
+                android:text="Prev"
+                android:id="@+id/BUT1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"></Button>
+            <TextView
+                android:id="@+id/TVDATE"
+                android:layout_width="210dp"
+                android:layout_height="match_parent">
+            </TextView>
+            <Button
+                android:text="next"
+                android:id="@+id/BUT2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"></Button>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/week_layout">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/month_layout"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.example.tracker.TasksFragment"
+            android:id="@+id/task"
+            ></fragment>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
